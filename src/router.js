@@ -16,6 +16,11 @@ export default new Router({
       path: '/usuarios',
       name: 'usuarios',
       component: () => import(/* webpackChunkName: "about" */ './views/Usuarios.vue')
+    },
+    {
+      path: '/novoUsuario',
+      name: 'novoUsuario',
+      component: () => import(/* webpackChunkName: "about" */ './views/NovoUsuario.vue')
     }
   ]
 })

@@ -3,19 +3,7 @@
     
     <div class="container">
 
-      <form @submit.prevent="salvar">
-
-          <label>Nome</label>
-          <input type="text" placeholder="Nome" v-model="usuario.username" required>
-          <label>Email</label>
-          <input type="email" placeholder="Email" v-model="usuario.email" required>
-          <label>Senha</label>
-          <input type="password" placeholder="Senha" v-model="usuario.password" required>
-
-          <button class="waves-effect waves-light btn-small">Salvar<i class="material-icons left">save</i></button>
-
-      </form>
-
+     
       <table>
 
         <thead>
@@ -76,18 +64,12 @@ export default {
 
         listar(){
             Usuario.listar().then(resposta => {
+              console.log(resposta.data);
                 this.usuarios = resposta.data;
             })
         },
         
-        salvar(){
-
-            Usuario.salvar(this.usuario).then(resposta => {
-                alert('Salvo com sucesso!')
-                this.listar()
-            })
-
-        },
+        
     }
 }
 </script>
