@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Sistema Aposentados</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><router-link to="/">Início</router-link></li>
+          <li><router-link to="/usuarios">Usuarios</router-link></li>
+          
+        </ul>
+      </div>
+    </nav>
+
+    <ul class="sidenav" id="mobile-demo">
+        <li><router-link to="/">Início</router-link></li>
+        <li><router-link to="/usuarios">Usuarios</router-link></li>
+    </ul>
+    <router-view/>
   </div>
+  
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+nav{
+      background-color: #26a69a;
+}
+nav .nav-wrapper {
+    width: 70%;
+    margin: auto;
 }
 </style>
