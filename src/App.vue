@@ -7,6 +7,7 @@
         <ul class="right hide-on-med-and-down">
           <li><router-link to="/">Início</router-link></li>
           <li><router-link to="/usuarios">Usuarios</router-link></li>
+          <li><router-link to="/associados">Associados</router-link></li>
           
         </ul>
       </div>
@@ -15,6 +16,7 @@
     <ul class="sidenav" id="mobile-demo">
         <li><router-link to="/">Início</router-link></li>
         <li><router-link to="/usuarios">Usuarios</router-link></li>
+        <li><router-link to="/associados">Associados</router-link></li>
     </ul>
     <router-view/>
   </div>

@@ -2,6 +2,8 @@
   <div class="user">
     
     <div class="container">
+      <br>
+      <router-link to="/novoUsuario"><a class="btn-floating btn-large waves-effect waves-light red right"><i class="material-icons">add</i></a></router-link>
 
      
       <table>
@@ -11,7 +13,6 @@
           <tr>
             <th>Nome</th>
             <th>Email</th>
-            <th>Opções</th>
           </tr>
 
         </thead>
@@ -22,10 +23,6 @@
 
             <td>{{ usuario.username }}</td>
             <td>{{ usuario.email }}</td>
-            <td>
-              <button class="waves-effect btn-small blue darken-1"><i class="material-icons">create</i></button>
-              <button class="waves-effect btn-small red darken-1"><i class="material-icons">delete_sweep</i></button>
-            </td>
 
           </tr>
 
@@ -64,7 +61,6 @@ export default {
 
         listar(){
             Usuario.listar().then(resposta => {
-              console.log(resposta.data);
                 this.usuarios = resposta.data;
             })
         },
